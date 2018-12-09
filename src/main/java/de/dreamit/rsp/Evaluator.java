@@ -1,10 +1,23 @@
 package de.dreamit.rsp;
 
+import static de.dreamit.rsp.Gesture.ROCK;
+import static de.dreamit.rsp.Gesture.SCISSORS;
+import static de.dreamit.rsp.Gesture.PAPER;
+
 /**
  * Evaluator who knows which gesture wins in a battle
  */
 public class Evaluator {
 
+    /**
+     * Get result of a battle of two gestures
+     *
+     * @param gesture1
+     * @param gesture2
+     * @return 1 if gesture1 wins
+     * 2 if gesture2 wins
+     * 0 if gesture1 == gesture2
+     */
     public int getWinningGesture(Gesture gesture1, Gesture gesture2) {
 
         if (gesture1 == gesture2) {
@@ -12,24 +25,11 @@ public class Evaluator {
         }
 
         switch (gesture1) {
-            case ROCK:
-                if (gesture2 == Gesture.SCISSORS) {
-                    return 1;
-                } else if (gesture2 == Gesture.PAPER) {
-                    return 2;
-                }
+            case ROCK: return (gesture2 == SCISSORS ? 1 : 2);
             case SCISSORS:
-                if (gesture2 == Gesture.PAPER) {
-                    return 1;
-                } else if (gesture2 == Gesture.ROCK) {
-                    return 2;
-                }
+                return (gesture2 == PAPER ? 1 : 2);
             case PAPER:
-                if (gesture2 == Gesture.ROCK) {
-                    return 1;
-                } else if (gesture2 == Gesture.SCISSORS) {
-                    return 2;
-                }
+                return (gesture2 == ROCK ? 1 : 2);
             default:
                 return 0;
         }
