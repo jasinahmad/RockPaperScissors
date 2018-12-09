@@ -19,7 +19,7 @@ public class TestGestureScissors {
     }
 
     @Test
-    public void testScissorsVsSPaper() {
+    public void testScissorsVsPaper() {
         assertEquals(evaluator.getWinningGesture(Gesture.SCISSORS, Gesture.PAPER), 1);
     }
 
