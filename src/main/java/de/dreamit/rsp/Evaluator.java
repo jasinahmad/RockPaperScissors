@@ -18,6 +18,12 @@ public class Evaluator {
                 } else if (gesture2 == Gesture.PAPER) {
                     return 2;
                 }
+            case SCISSORS:
+                if (gesture2 == Gesture.PAPER) {
+                    return 1;
+                } else if (gesture2 == Gesture.ROCK) {
+                    return 2;
+                }
             default:
                 return 0;
         }
