@@ -6,17 +6,20 @@ package de.dreamit.rsp;
 public class Evaluator {
 
     public int getWinningGesture(Gesture gesture1, Gesture gesture2) {
-        if (gesture1 == Gesture.ROCK && gesture2 == Gesture.ROCK) {
+
+        if (gesture1 == gesture2) {
             return 0;
         }
 
-        if (gesture1 == Gesture.ROCK && gesture2 == Gesture.SCISSORS) {
-            return 1;
+        switch (gesture1) {
+            case ROCK:
+                if (gesture2 == Gesture.SCISSORS) {
+                    return 1;
+                } else if (gesture2 == Gesture.PAPER) {
+                    return 2;
+                }
+            default:
+                return 0;
         }
-
-        if (gesture1 == Gesture.ROCK && gesture2 == Gesture.PAPER) {
-            return 2;
-        }
-        return 0;
     }
 }
