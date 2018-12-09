@@ -14,4 +14,22 @@ public class TestGestureRock {
 
         assertEquals(evaluator.getWinningGesture(rock1, rock2), 0);
     }
+
+    @Test
+    public void testRockVsScissors() {
+        Evaluator evaluator = new Evaluator();
+        Gesture rock = Gesture.ROCK;
+        Gesture scissors = Gesture.SCISSORS;
+
+        assertEquals(evaluator.getWinningGesture(rock, scissors), 1);
+    }
+
+    @Test
+    public void testRockVsPaper() {
+        Evaluator evaluator = new Evaluator();
+        Gesture rock = Gesture.ROCK;
+        Gesture paper = Gesture.PAPER;
+
+        assertEquals(evaluator.getWinningGesture(rock, paper), 2);
+    }
 }

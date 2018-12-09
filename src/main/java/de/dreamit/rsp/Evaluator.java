@@ -9,6 +9,14 @@ public class Evaluator {
         if (gesture1 == Gesture.ROCK && gesture2 == Gesture.ROCK) {
             return 0;
         }
+
+        if (gesture1 == Gesture.ROCK && gesture2 == Gesture.SCISSORS) {
+            return 1;
+        }
+
+        if (gesture1 == Gesture.ROCK && gesture2 == Gesture.PAPER) {
+            return 2;
+        }
         return 0;
     }
 }
