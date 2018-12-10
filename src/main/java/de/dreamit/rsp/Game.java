@@ -17,8 +17,8 @@ public class Game {
     /**
      * Battle between two player and increment the score of the winning player or the draw counter
      *
-     * @param player1
-     * @param player2
+     * @param player1   Player 1
+     * @param player2   Player 2
      */
     public void play(Player player1, Player player2) {
         switch(evaluator.getWinningGesture(player1.getGesture(),player2.getGesture())){
@@ -27,6 +27,14 @@ public class Game {
             default: draw++;
         }
     }
+
+    /**
+     * Return the score of the players and draw counter
+     */
+    public String getResult(){
+        return "Player1 Wins: "+ player1Score +"\nPlayer2 Wins: "+ player2Score +"\nDraw: "+draw;
+    }
+
 
     //Getter for scores and draw counter
 

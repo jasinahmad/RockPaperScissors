@@ -63,4 +63,11 @@ public class GameTest {
         assertEquals(game.getPlayer2Score(), player2Score);
         assertEquals(game.getDraw(), draw+1);
     }
+
+    @Test
+    public void testGetResult(){
+        testDraw();
+        String result = "Player1 Wins: 0\nPlayer2 Wins: 0\nDraw: 1";
+        assertEquals(game.getResult(),result);
+    }
 }
