@@ -14,13 +14,29 @@ public class Game {
         draw = 0;
     }
 
+    /**
+     * Battle between two player and increment the score of the winning player or the draw counter
+     *
+     * @param player1
+     * @param player2
+     */
     public void play(Player player1, Player player2) {
         if (evaluator.getWinningGesture(player1.getGesture(), player2.getGesture()) == 1) {
             player1Score++;
         }
     }
 
+    //Getter for scores and draw counter
+
     public int getPlayer1Score() {
         return player1Score;
+    }
+
+    public int getPlayer2Score() {
+        return player2Score;
+    }
+
+    public int getDraw() {
+        return draw;
     }
 }
