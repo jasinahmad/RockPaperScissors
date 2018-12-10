@@ -1,8 +1,6 @@
 package de.dreamit.rsp;
 
-import static de.dreamit.rsp.Gesture.ROCK;
-import static de.dreamit.rsp.Gesture.SCISSORS;
-import static de.dreamit.rsp.Gesture.PAPER;
+import static de.dreamit.rsp.Gesture.*;
 
 /**
  * Evaluator who knows which gesture wins in a battle

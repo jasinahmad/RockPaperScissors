@@ -3,6 +3,7 @@ package de.dreamit.rsp;
 import org.junit.Before;
 import org.junit.Test;
 
+import static de.dreamit.rsp.Gesture.*;
 import static org.junit.Assert.assertEquals;
 
 public class PaperTest {
@@ -15,17 +16,17 @@ public class PaperTest {
 
     @Test
     public void testPaperVsPaper() {
-        assertEquals(evaluator.getWinningGesture(Gesture.PAPER, Gesture.PAPER), 0);
+        assertEquals(evaluator.getWinningGesture(PAPER, PAPER), 0);
     }
 
     @Test
     public void testPaperVsRock() {
-        assertEquals(evaluator.getWinningGesture(Gesture.PAPER, Gesture.ROCK), 1);
+        assertEquals(evaluator.getWinningGesture(PAPER, ROCK), 1);
     }
 
     @Test
     public void testPaperVsScissors() {
-        assertEquals(evaluator.getWinningGesture(Gesture.PAPER, Gesture.SCISSORS), 2);
+        assertEquals(evaluator.getWinningGesture(PAPER, SCISSORS), 2);
     }
 }
 

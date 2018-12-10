@@ -23,6 +23,10 @@ public class Game {
     public void play(Player player1, Player player2) {
         if (evaluator.getWinningGesture(player1.getGesture(), player2.getGesture()) == 1) {
             player1Score++;
+        }else if(evaluator.getWinningGesture(player1.getGesture(), player2.getGesture()) == 2){
+            player2Score++;
+        }else{
+            draw++;
         }
     }
 
