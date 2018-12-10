@@ -49,7 +49,7 @@ public class GameTest {
 
     @Test
     public void testDraw() {
-        Gesture randomGesture = Gesture.randomGesture();
+        Gesture randomGesture = randomGesture();
         Player player1 = new Player(randomGesture);
         Player player2 = new Player(randomGesture);
 
