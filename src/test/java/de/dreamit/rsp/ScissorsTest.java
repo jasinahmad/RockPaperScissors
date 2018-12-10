@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestGestureScissors {
+public class ScissorsTest {
     Evaluator evaluator;
 
     @Before

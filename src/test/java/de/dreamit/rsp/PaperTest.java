@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TestGesturePaper {
+public class PaperTest {
     Evaluator evaluator;
 
     @Before
